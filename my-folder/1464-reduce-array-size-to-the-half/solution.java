@@ -26,7 +26,7 @@ class Solution {
         
         map.remove(map);
         // map.forEach((k,v) -> list.add(v));
-PriorityQueue<Integer> pq=new PriorityQueue<Integer>(Collections.reverseOrder());
+    PriorityQueue<Integer> pq=new PriorityQueue<Integer>            (Collections.reverseOrder());
         pq.addAll(list);
         count=arr.length;
         int k=0;
