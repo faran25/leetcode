@@ -1,24 +1,23 @@
 class Solution {
-    public List<Integer> majorityElement(int[] A) {
-        
-        int max1=A[0];
+    public List<Integer> majorityElement(int[] nums) {
+        int max1=nums[0];
         int max2=Integer.MIN_VALUE;
 
         int count1=1;
         int count2=0;
 
-        for(int i=1;i<A.length;i++)
+        for(int i=1;i<nums.length;i++)
         {
-            if(A[i]==max1) count1++;
-            else if(A[i]==max2) count2++;
+            if(nums[i]==max1) count1++;
+            else if(nums[i]==max2) count2++;
             else if(count1==0) 
             {
-                max1=A[i];
+                max1=nums[i];
                 count1=1;
             }
             else if(count2==0) 
             {
-                max2=A[i];
+                max2=nums[i];
                 count2=1;
             }
             else{
@@ -29,22 +28,14 @@ class Solution {
         }
         count1=0;
         count2=0;
-        for(int i=0;i<A.length;i++)
+        for(int i=0;i<nums.length;i++)
         {
-            if(max1==A[i]) count1++;
-            else if(max2==A[i]) count2++;
+            if(max1==nums[i]) count1++;
+            else if(max2==nums[i]) count2++;
         }
-        List <Integer> ans=new ArrayList<>();
-        if(count1>A.length/3 && count2>A.length/3) 
-        {
-            ans.add(max1);
-            ans.add(max2);
-        }
-        else if(count1>A.length/3) ans.add(max1);
-        else if(count2>A.length/3) ans.add(max2);
-        
-        return ans;
-        
-        
+        List<Integer> list=new ArrayList<>();
+        if(count1>nums.length/3) list.add(max1);
+        if(count2>nums.length/3) list.add(max2);
+        return list;
     }
 }
