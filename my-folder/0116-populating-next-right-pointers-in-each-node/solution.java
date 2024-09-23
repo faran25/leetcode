@@ -41,15 +41,8 @@ class Solution {
     }*/
     private void level(Node root)
     {
-        if(root==null) return;
-        if(root.left==null)
-        {
-            return;
-        }
-        //if(root.right!=null)
-        {
-            root.left.next=root.right;
-        }
+        if(root==null || root.left==null) return;
+        root.left.next=root.right;
         if (root.next != null) {
             root.right.next = root.next.left;
         }
