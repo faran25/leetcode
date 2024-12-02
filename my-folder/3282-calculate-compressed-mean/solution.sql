@@ -1,3 +1,7 @@
-/* Write your PL/SQL query statement below */
-SELECT round(sum(item_count*order_occurrences)/sum(order_occurrences) , 2) as average_items_per_order 
-from Orders;
+# Write your MySQL query statement below
+
+##SELECT round(sum(item_count*order_occurrences)/sum(order_occurrences) , 2) as average_items_per_order 
+##from Orders;
+
+SELECT round(sum(item_count*order_occurrences)/sum(order_occurrences) , 2) as average_items_per_order
+from Orders
