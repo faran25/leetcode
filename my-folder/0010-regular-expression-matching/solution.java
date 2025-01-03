@@ -34,17 +34,6 @@ class Solution {
             }
         }
         //System.out.println();
-        for(int i=0;i<=n;i++)
-        {
-            for(int j=0;j<=m;j++)
-            {
-                if(dp[i][j])
-                System.out.print(1+" ");
-                else 
-                System.out.print(0+" ");
-            }
-            System.out.println();
-        }
         return dp[n][m];
     }
 }
