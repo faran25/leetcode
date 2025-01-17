@@ -17,16 +17,6 @@ class Solution {
             list.add(sb.toString());
         }
         ans.add(new ArrayList<>(list));
-        
-        /*System.out.println("----");
-        for(int i=0;i<mat.length;i++)
-        {
-            System.out.println();
-            for(int j=0;j<mat.length;j++)
-            {
-                System.out.print(mat[i][j]+" ");
-            }
-        }*/
     }
     
     public void backtrack(List<List<String>> ans , int n, int[][] mat, int i)
