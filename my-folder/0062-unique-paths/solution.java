@@ -1,20 +1,15 @@
 class Solution {
-    public int uniquePaths(int A, int B) {
-        int dp[]=new int[B];
-        for(int i=0;i<B;i++)
-        {
-            dp[i]=1;
-            
-        }
-        
-        for(int i=1;i<A;i++)
-        {
-            for(int j=1;j<B;j++)
-            {
-                dp[j]=dp[j]+dp[j-1];
-            }
-        }
-        
-        return dp[B-1];
+    int [][] dp;
+    public int backtrack(int m, int n)
+    {
+        if(m==1 || n==1) return 1;
+        if(dp[m][n]>0) return dp[m][n];
+        dp[m][n]=backtrack(m-1,n)+backtrack(m,n-1);
+        return dp[m][n];
+    }
+    public int uniquePaths(int m, int n) {
+        if(m==1 || n==1) return 1;
+        dp=new int[m+1][n+1];
+        return backtrack(m,n);
     }
 }
