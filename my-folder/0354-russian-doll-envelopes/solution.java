@@ -37,8 +37,8 @@ class Solution {
                 return a[0] - b[0];
             return b[1] - a[1];
         });
-        int[] dp = new int[envelopes.length + 1];
-        Arrays.fill(dp, 1);
+        //int[] dp = new int[envelopes.length + 1];
+        //Arrays.fill(dp, 1);
         int[] arr = new int[envelopes.length];
         
         /* for(int i=0;i<envelopes.length;i++)
