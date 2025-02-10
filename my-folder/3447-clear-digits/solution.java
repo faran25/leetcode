@@ -13,13 +13,13 @@ class Solution {
                 st.push(s.charAt(i));
             }
         }
-        String ans="";
+        StringBuilder ans=new StringBuilder();
         
         while(st.size()>0)
         {
-            ans=st.pop()+""+ans;
+            ans.append(st.pop());
         }
-        return ans;
+        return ans.reverse().toString();
         
     }
 }
