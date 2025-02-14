@@ -27,7 +27,6 @@ class Solution {
                 {
                     dp[i][j]=dp[i-1][j];
                 }
-                //if(dp[i][j]==sum/2) return true;
             }
         }
         for(int i=0;i<n;i++)
